@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gnome-shell-extensions">
+  <enum id='org.gnome.shell.extensions.winthumbnails.PositionMode'>
+    <value value='0' nick='left'/>
+    <value value='1' nick='right'/>
+  </enum>
+  <enum id='org.gnome.shell.extensions.winthumbnails.AutoHideEffect'>
+    <value value='0' nick='resize'/>
+    <value value='1' nick='move'/>
+    <value value='2' nick='rescale'/>
+  </enum>
+
+  <schema path="/org/gnome/shell/extensions/winthumbnails/" id="org.gnome.shell.extensions.winthumbnails">
+    <key name="position" enum="org.gnome.shell.extensions.winthumbnails.PositionMode">
+      <default>'right'</default>
+      <summary>Position of the dock</summary>
+      <description>Sets the position of the dock in the screen. Allowed values are 'right' or 'left'</description>
+    </key>
+    <key type="i" name="size">
+      <default>128</default>
+      <summary>Item size</summary>
+      <description>Sets item size of the dock.</description>
+    </key>
+    <key type="b" name="autohide">
+      <default>false</default>
+      <summary>Enable/disable autohide</summary>
+    </key>
+    <key name="hide-effect" enum="org.gnome.shell.extensions.winthumbnails.AutoHideEffect">
+      <default>'move'</default>
+      <summary>Autohide effect</summary>
+      <description>Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'</description>
+    </key>
+    <key type="d" name="hide-effect-duration">
+      <default>0.3</default>
+      <summary>Autohide duration</summary>
+      <description>Sets the time duration of the autohide effect.</description>
+    </key>
+    <key type="b" name="show-app-icon">
+      <default>true</default>
+      <summary>Enable/disable application icon in the corner.</summary>
+    </key>
+    <key type="b" name="show-close-button">
+      <default>true</default>
+      <summary>Enable/disable application close button.</summary>
+    </key>      
+    <key type="b" name="show-window-tooltip">
+      <default>false</default>
+      <summary>Enable/disable window tooltip.</summary>
+    </key>    
+    <key type="b" name="show-only-minimize-window">
+      <default>false</default>
+      <summary>Enable/disable mode a display only minimized windows.</summary>
+    </key>     
+  </schema>
+</schemalist>
